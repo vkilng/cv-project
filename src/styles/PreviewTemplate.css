@@ -1,0 +1,73 @@
+.PreviewTemplate {
+    padding: 2vw 4vw;
+    border: solid 1px black;
+    overflow-y: scroll;
+}
+
+.PreviewTemplate .section {
+    padding: 1vw 0;
+}
+.PreviewTemplate .section.two, .PreviewTemplate .section.three {
+    border-top: solid 1px black;
+}
+
+.PreviewTemplate .section.one {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.PreviewTemplate .section.one .left {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 0.5vw;
+}
+.PreviewTemplate .section.one .name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.PreviewTemplate .section.one .right {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 0.5vw;
+    font-size: 0.7rem;
+    align-self: center;
+    justify-self: end;
+}
+.PreviewTemplate .section.one .right div {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+.PreviewTemplate .section.one i {
+    font-size: 0.7rem;
+    font-variation-settings: 'FILL' 1;
+}
+
+.PreviewTemplate .header {
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 1.5vw 0;
+    color: #3f3f46;
+}
+.PreviewTemplate .section.two .row, .PreviewTemplate .section.three .top-half {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 1vw;
+}
+.PreviewTemplate .section.two .row span:first-of-type {
+    max-width: 25vw;
+    color: #4b5563;
+}
+
+.PreviewTemplate .section.three .row {
+    display: grid;
+    margin-bottom: 1.5vw;
+    font-size: 0.8rem;
+}
+.PreviewTemplate .section.three .top-half {
+    margin-bottom: 0.3vw;
+}
+.PreviewTemplate .section.three .bottom-half {
+    color: #4b5563;
+    white-space: pre-wrap;
+}

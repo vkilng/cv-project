@@ -1,3 +1,9 @@
+# CV / Resume Maker
+
+- [Live] (https://vkilng.github.io/cv-project)
+
+- First assignment project for the React JS course at [The Odin Project](https://theodinproject.com/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

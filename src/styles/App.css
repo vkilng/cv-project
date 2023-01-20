@@ -1,0 +1,8 @@
+.App {
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 2vw;
+    height: 90vh;
+    overflow-y: hidden;
+}
