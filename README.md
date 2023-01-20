@@ -1,6 +1,6 @@
 # CV / Resume Maker
 
-- [Live] (https://vkilng.github.io/cv-project)
+- [Live](https://vkilng.github.io/cv-project)
 
 - First assignment project for the React JS course at [The Odin Project](https://theodinproject.com/).
 
