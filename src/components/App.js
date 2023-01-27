@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ReactToPrint from 'react-to-print';
 import uniqid from 'uniqid';
 import EditingTemplate from './EditingTemplate';
 import PreviewTemplate from './PreviewTemplate';
@@ -46,7 +47,12 @@ class App extends Component {
   
   updateField(category, field, content, index) {
     const dummmyObject = Object.assign({},this.state);
-    if (category === 'personalDetails') dummmyObject[category][field] = content;
+    if (category === 'personalDetails') {
+    this.setState(dummmyObject);
+      dummmyObject[category][field] = content;
+      this.setState(dummmyObject);
+      return;
+    }
     if (category !== '') dummmyObject[category][index][field] = content;
     this.setState(dummmyObject);
   }
@@ -61,7 +67,22 @@ class App extends Component {
           deleteFieldSet = {(category,index) => this.deleteFieldSet(category,index)}
           updateField = {(category,field,content,count) => this.updateField(category,field,content,count)}
         />
-        <PreviewTemplate data = {this.state} />
+
+        <div className = "DownloadPDF">
+          <ReactToPrint
+            trigger = {() => {
+                return (<div>PDF</div>)
+            }}
+            content = {() => this.componentRef}
+          />
+        </div>
+        
+        <div style={{border: 'solid 1px black', overflowY: 'scroll'}}>
+          <PreviewTemplate
+            data = {this.state}
+            ref = {el => (this.componentRef = el)}
+          />
+        </div>
       </div>
     );
   }

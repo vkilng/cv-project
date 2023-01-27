@@ -1,7 +1,5 @@
 .PreviewTemplate {
     padding: 2vw 4vw;
-    border: solid 1px black;
-    overflow-y: scroll;
 }
 
 .PreviewTemplate .section {
