@@ -48,7 +48,6 @@ class App extends Component {
   updateField(category, field, content, index) {
     const dummmyObject = Object.assign({},this.state);
     if (category === 'personalDetails') {
-    this.setState(dummmyObject);
       dummmyObject[category][field] = content;
       this.setState(dummmyObject);
       return;

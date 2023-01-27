@@ -2,7 +2,7 @@
     padding: 2vw;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    column-gap: 2vw;
+    gap: 2vw;
     height: 90vh;
     overflow-y: hidden;
 }
@@ -26,4 +26,14 @@
 }
 .DownloadPDF div:hover {
     background-color: #10b981;
+}
+
+@media screen and (max-width: 600px) {
+    .App {
+        grid-template-columns: 1fr;
+    }
+    .DownloadPDF {
+        left: 50%;
+        top: 46%;
+    }
 }
